@@ -1,0 +1,20 @@
+'''
+Program to check whether a number entered
+by the user is prime or not
+'''
+
+def check_prime(num):  #function definition
+    divisors=0
+    for x in range(1,num+1):  #loop to run through each inetger between 1 and the entered number
+        if (num%x==0):  #in other words, if x is a divisor of num
+           divisors+=1
+    if (num==1):
+        print ("The number is not prime")
+    elif (divisors>2):  #beacuse a prime number has only 2 divisors (1 and itself)
+        print("The number is not prime.")
+    else:
+        print("The number is prime.")    
+        
+number=int(raw_input("Enter a number: "))
+check_prime(number)  
+    
